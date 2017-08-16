@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    
+    <package name="AdminLogin" namespace="/" extends="struts-default">
+        <default-action-ref name="error"></default-action-ref>  <!-- 全局处理结果 -->
+        <action name="error">  
+            <result>error.html</result>  
+        </action>
+        
+        <action name="admin" class="action.admin.AdminAction">  <!-- 仪表盘界面管理 -->
+            <result name="success">admin/admin.jsp</result>
+        </action>
+        <action name="upload" class="action.file.FileAction" method="upload"> <!-- 文件上传 -->
+            <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg,image/x-png</param>
+            <param name="maximumSize">1048576</param>
+        	<result></result>
+        </action>
+    </package>
+    
+    <package name="ArticlePublish" namespace="/admin/article" extends="struts-default"> <!-- 管理发布文章界面 -->
+       	<action name="*" class="action.admin.ArticleAction" method="publish">  
+     	    <result>../publish.jsp</result>
+   			<allowed-methods>publish</allowed-methods>
+   		</action>
+    </package>
+    
+    <package name="AdminManage" namespace="/admin" extends="struts-default">
+    	<action name="login">  <!-- 管理员登录界面 -->
+    		<result>login.jsp</result>
+     	</action>
+     	<action name="*ad" class="action.admin.AdminAction" method="{1}"> <!-- 验证登录 退出登录 修改密码 -->
+            <allowed-methods>login, logout, change, setWidth</allowed-methods>
+        </action>
+
+     	<action name="article" class="action.admin.ArticleAction">  <!-- 文章管理 -->
+    		<result>article.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="*art" class="action.admin.ArticleAction" method="{1}">
+     	    <result></result>
+     	    <allowed-methods>add, del, change</allowed-methods>
+     	</action>
+     	
+     	<action name="member" class="action.admin.MemberAction">  <!-- 成员管理 -->
+    		<result>member.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="*mem" class="action.admin.MemberAction" method="{1}">
+     	    <result></result>
+     	    <allowed-methods>add, del, change</allowed-methods>
+     	</action>
+     	
+     	<action name="email" class="action.admin.EmailAction">  <!-- 邮箱管理 -->
+    		<result>email.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="*eml" class="action.admin.EmailAction" method="{1}">
+     	    <result></result>
+     	    <allowed-methods>add, del, sets</allowed-methods>
+     	</action>
+     	
+     	<action name="setting" class="action.admin.AdminAction">  <!-- 系统设置 -->
+    		<result>setting.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+    </package>
+    
+    <package name="ArticleShow" namespace="/article" extends="struts-default"> <!-- 用户浏览文章界面 -->
+       	<action name="*" class="action.user.UserAction" method="show">  
+     	    <result>../show.jsp</result>
+   			<allowed-methods>show</allowed-methods>
+   		</action>
+   		<action name="like" class="action.user.UserAction" method="like"> <!-- 点赞 -->
+   			<allowed-methods>like</allowed-methods>
+   		</action>
+    </package>
+    
+    <package name="User" namespace="/" extends="struts-default">
+        <action name="ajaxLoad" class="action.user.UserAction" method="ajaxLoad"> <!-- 通过ajax加载数据 -->
+    		<allowed-methods>ajaxLoad</allowed-methods>
+     	</action>
+        
+        <action name="index" class="action.user.UserAction">  <!-- 主页 -->
+    		<result>defualt.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="news" class="action.user.UserAction">  <!-- 创客动态页面 -->
+    		<result>news.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="notice" class="action.user.UserAction">  <!-- 公告通知页面 -->
+    		<result>notice.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="solution" class="action.user.UserAction">  <!-- 培养方案页面 -->
+    		<result>solution.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="result" class="action.user.UserAction">  <!-- 成果展示页面 -->
+    		<result>result.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="about" class="action.user.UserAction">  <!-- 关于我们页面 -->
+    		<result>about.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="join" class="action.user.UserAction">  <!-- 加入我们页面 -->
+    		<result>join.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+     	<action name="contact" class="action.user.UserAction">  <!-- 联系我们页面 -->
+    		<result>contact.jsp</result>
+    		<allowed-methods></allowed-methods>
+     	</action>
+    </package>
+</struts>

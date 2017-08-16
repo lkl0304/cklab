@@ -1,0 +1,10 @@
+/**
+* lkl 8.7
+**/
+.join-us .my-box > div > div:nth-child(2) { margin: 40px 0 0 0;  }
+.join-us .my-box > div > div:nth-child(2) div.thumbnail { padding: 20px 10px 10px; margin-bottom: 0; }
+
+.join-us .my-box > div > div:nth-child(2) div#accordion p { font-size: 15px; line-height: 30px; word-break: break-all; }  /* 右边手风琴样式 */
+.join-us .my-box > div > div:nth-child(2) div#accordion h4.panel-title { padding: 8px 0; }
+.join-us .my-box > div > div:nth-child(2) div#accordion h4.panel-title > a { display: block; padding: 8px 10px; text-decoration: none!important; color: #59bcdb; font-weight: 800; border-left: 3px solid #59bcdb; }
+.join-us .my-box > div > div:nth-child(2) div#accordion div.panel-heading { padding: 0 10px;!important; }

@@ -1,0 +1,18 @@
+/**
+* lkl 8.7
+**/
+
+/*成果展示标签页*/
+.result div.container > div:NTH-CHILD(2) { margin: 50px 0 0; border-top: 1px solid #C5C5C5; } /*展示成果盒子上边距 与 上边框*/
+.result div.container > div:NTH-CHILD(2) > ul li { padding: 18px 0 8px; width: 110px; font-size: 16px; text-align: center; cursor: pointer; } /*定义按钮样式*/
+.result div.container > div:NTH-CHILD(2) > ul li:NOT(.active):HOVER { background-color: #F6F6F6; }
+.result div.container > div:NTH-CHILD(2) > ul li.active { border-top: 2px solid #59bcdb; color: #59bcdb; }
+.result div.container > div:NTH-CHILD(2) > ul { margin: 0 auto; }
+@media screen and (max-width: 768px) {
+	.result div.container > div:NTH-CHILD(2) > ul { width: 100%!important; }
+}
+.result div.container > div:NTH-CHILD(2) > div { margin: 50px 10px 0; } /*整个成果盒子与按钮的上边距*/
+.result div.container > div:NTH-CHILD(2) > div div[class^='col-'] h4 { text-overflow: ellipsis; overflow: hidden; height: 40px; }  /*单个成果盒子样式 */
+.result div.container > div:NTH-CHILD(2) > div div[class^='col-'] p { padding: 5px 0 0; height: 45px; text-overflow: ellipsis; overflow: hidden; }
+.result div.container > div:NTH-CHILD(2) > div img { width: 100%; height: 150px;}
+.result div.container > div:NTH-CHILD(2) > div a { color: #59bcdb; }

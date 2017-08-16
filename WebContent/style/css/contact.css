@@ -1,0 +1,11 @@
+/**
+* lkl 8.7
+**/
+/* 联系我们的左边样式 */
+.contact-us div.container > div:NTH-CHILD(2) { margin: 50px 0 0; padding: 45px 0 0; border-top: 1px solid #C5C5C5; } 
+.contact-us div.container > div:NTH-CHILD(2) div.row > div:NTH-CHILD(1) > div { padding: 0 0 15px 80px; }
+.contact-us div.container > div:NTH-CHILD(2) div.row > div:NTH-CHILD(1) > div:NTH-CHILD(1) { background: url('../../images/contact/tel.png') no-repeat 8px 1.2vw; background-size: 50px; }
+.contact-us div.container > div:NTH-CHILD(2) div.row > div:NTH-CHILD(1) > div:NTH-CHILD(2) { background: url('../../images/contact/mail.png') no-repeat 8px 1.2vw; background-size: 50px; }
+.contact-us div.container > div:NTH-CHILD(2) div.row > div:NTH-CHILD(1) > div:NTH-CHILD(3) { background: url('../../images/contact/addr.png') no-repeat 8px 1.2vw; background-size: 50px; }
+/* 联系我们的表单样式 */
+.contact-us .input { margin: 13px 0; width: 100%; font-size: 16px; line-height: 20px; padding: 14px 20px; border-radius: 5px; color: #262626; border: 2px solid #e9e9e9; resize: none; }

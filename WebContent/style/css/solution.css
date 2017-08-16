@@ -1,0 +1,25 @@
+/**
+* lkl 8.6
+**/
+
+/*顶部大图 使用public bgimg-top样式*/ 
+.solu-top { width: 100%; }
+
+/*培养方案展示*/
+.plan-show > div > div:LAST-CHILD { margin: 40px 0 0 0; }
+.plan-show > div > div:LAST-CHILD div.tab-btns ul { width: 486px; margin: 0 auto; } /*使按钮居中*/
+.plan-show > div > div:LAST-CHILD div.tab-btns ul li { width: 120px; text-align: center; } /*设置按钮大小*/
+.plan-show > div > div:LAST-CHILD div.tab-btns ul li a { padding: 10px 0!important; } /*消除默认样式 重定义*/
+.plan-show > div > div:LAST-CHILD div.tab-btns ul li.active a { background-color: #5bc0de!important; }
+.plan-show > div > div:LAST-CHILD > div.tab-content { padding: 40px 4vw 0; font-weight: bold; font-size: 16px; } /*文字区 全部加粗*/
+@media screen and (max-width: 768px) {
+	.plan-show > div > div:LAST-CHILD div.tab-btns ul li { width: 80px!important; }
+	.plan-show > div > div:LAST-CHILD div.tab-btns ul { width: 326px!important; }
+	.plan-show > div > div:LAST-CHILD > div.tab-content { padding: 40px 0 0; }
+}
+
+/*未来发展方向*/
+.develop { background: url('../../images/light.png'); }
+.develop > div > div.row { padding: 40px 0 0 0; } /*定义栅格与上文字的距离*/
+.develop > div > div.row > div img { width: 100%; }
+.develop > div > div.row > div div.caption { min-height: 155px; padding: 38px 25px 28px; } /*文字盒子 定义内边距撑起盒子*/

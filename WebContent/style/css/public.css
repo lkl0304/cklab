@@ -1,0 +1,141 @@
+/**
+* lkl 8.6
+**/
+
+/* 通用的轮播样式 */
+/**
+* 格式
+* <div>
+*	<ul>
+*		<li>...</li> 按钮 样式需要自定义
+*		...
+*	</ul>
+*	<div>
+*		<div>...</div> 内容盒子
+*		...
+*	</div>
+* </div>
+**/
+#Slideshow_lkl > div { position: relative; overflow: hidden; }
+#Slideshow_lkl > div > div { position: absolute; top: 0; z-index: 10; transition: transform 0.8s, -webkit-transform 0.8s; transform: translateX(-100%); }
+#Slideshow_lkl > div > div.active { position: relative; z-index: 11; transform: translateX(0); }
+#Slideshow_lkl > div > div.active ~ div { transform: translateX(100%); }
+
+/* 通用的盒子加标题样式 */
+.my-box { padding: 4vw 15px 7vw; width: 100%; } /*定义盒子的上下边距 */
+div.my-title > h1 { font-size: 50px; }
+div.my-title > p { font-size: 18px; line-height: 30px; margin-top: 15px; }
+@media screen and (max-width: 640px){
+	div.my-title > h1 { font-size: 30px; }
+	div.my-title > p { font-size: 15px; }
+}
+@media screen and (max-width: 640px){
+	div.note-title > h1 { font-size: 30px; }
+	div.note-title > p { font-size: 15px; }
+}
+/* 通用的顶部大图盒子 */
+/** 
+*格式
+*<div class="mini-top">
+*	<div>
+*		<p>内容</p>
+*	</div>
+*</div>
+**/
+.mini-top > div { background: url('../../images/dark.png'); padding: 120px; font-size: 45px; color: #fff; text-align: center; }
+@media screen and (max-width: 640px) {
+	.mini-top > div { padding: 101px; font-size: 30px; }
+}
+/* 通用的图片背景顶部盒子 */
+/**
+*格式
+*<div style="background: url('大图片') no-repeat 0 0;" class="bgimg-top">
+*	<div class="text-center">
+		<div>
+*			<h2><strong>标题</strong></h2>
+*	       <p> 内容 </p>
+*	       <a href="" class="btn btn-info">按钮</a>
+*		</div>
+*	</div>
+*</div>
+**/
+.bgimg-top { background-repeat: no-repeat!important; background-position: center!important; background-size: cover; color: #fff; } /*盒子背景的整体样式*/
+.bgimg-top > div { padding: 6.5vw 8vw 10vw; } /*用于撑开盒子*/
+.bgimg-top > div h2 { font-size: 45px; }
+.bgimg-top > div p { font-size: 16px; line-height: 25px; padding: 5px 0; }
+@media screen and (max-width: 640px) {
+	.bgimg-top > div h2 { font-size: 26px!important; }
+	.bgimg-top > div p { font-size: 14px!important; line-height: 20px!important; }
+}
+/* 天看色的文字 */
+.text-c { color: #59bcdb!important; }
+
+/*自定义的文章盒子*/
+/**
+<div class="article-box">
+	<div class="article-header">
+		<h3><a href="#">标题</a></h3>
+	</div>
+	<div class="article-body">
+		内容
+	</div>
+	<div class="article-footer">
+		<div>
+			<time>2017-8-8</time>
+		</div>
+		<div>
+			<a href="#">查看详情 >></a>
+		</div>
+	</div>
+</div>
+**/
+.article-box { margin: 0 0 35px; padding: 0 0 8px; background-color: rgba(200, 200, 200, 0.15); }  /*盒子整体样式 边距*/
+.article-box .article-header { position: relative; width: 100%; padding: 12px 110px 12px 25px; }  /*标题整体样式 大小*/
+.article-box .article-header h3 { margin: 0; }
+.article-box .article-header p { position: absolute; top: 15px; color: #7b7b7b; right: 2.5em; font-size: 11px; font-weight: 400; }
+.article-box .article-header a { text-orientation: none; color: #696969; }
+.article-box .article-header a:hover { text-orientation: none; color: #9783C5; }
+.article-box .article-header a:active { text-decoration: none; }
+.article-box .article-header a:link { text-decoration: none; }
+@media screen and (min-width: 640px) {
+	.article-box .article-header {  border-left: 5px solid #59bcdb; }
+	.article-box .article-header:hover { border-left: 4px solid #84D7CB; }
+}
+.article-box .article-body { line-height: 25px; font-size: 15px; margin: 2px 2em 6px; max-height: 100px; overflow: hidden; word-break: break-all; } /*文章内容区 最大高度*/
+.article-box .article-footer { position: relative; margin: 5px 2em 0; padding-top: 5px; border-top: 1px solid #D8D8D8; } /*文章脚底样式*/
+.article-box .article-footer > div:first-child { position: relative; bottom: 0; left: 0; padding: 5px 0 0 17px; background: url('../../images/time.png') no-repeat 1px center; background-size: 13px 13px; color: #A1A1A1; }
+.article-box .article-footer > div:last-child { position: absolute; bottom: 0; right: 0; }
+@media screen and (max-width: 640px) {
+	.article-box .article-header { padding-left: 10px; }
+	.article-box .article-footer { margin: 5px 10px 0; }
+	.article-box .article-body { border-top: 1px solid #D8D8D8; margin: 2px 10px 6px; }
+}
+
+/*自定义分页*/
+/*
+<div class="my-page text-center">
+	<ul class="pagination">
+		<li class=""><a href="#">&laquo; Prev</a></li>
+		<li class="active"><a href="javascript:void(0);">1</a></li>
+		<li class=""><a href="javascript:void(0);">2</a></li>
+		<li class=""><a href="javascript:void(0);">3</a></li>
+		<li class=""><a href="#">Next &raquo;</a></li>
+	</ul>
+</div>
+<script type="text/javascript">
+	$('.my-page').hover(function() {
+		$(this).find('li:first > a, li:last > a').css('display', 'inline');
+	}, function() {
+		$(this).find('li:first > a, li:last > a').css('display', 'none');
+	});
+</script>
+*/
+.my-page, .my-page ul, .my-page ul > li, .my-page ul > li > a { border: none!important;  }
+.my-page ul > li.active > a { background: #333!important; }
+.my-page ul > li > a { display: inline-block; padding: 0; text-align: center; }
+.my-page ul > li:NOT(:FIRST-CHILD):NOT(:LAST-CHILD) > a { background: #ddd; color: #fff!important; width: 20px; height: 20px; margin: 0 3px; border-radius: 50%; }
+.my-page ul > li:FIRST-CHILD > a, .my-page ul > li:LAST-CHILD > a  { display: none; background: rgba(0,0,0,0); color: #000!important; line-height: 22px; margin: 0 15px; }
+@media screen and (max-width: 640px) {
+	.my-page ul > li:FIRST-CHILD > a, .my-page ul > li:LAST-CHILD > a { display: inline!important; }
+}
+

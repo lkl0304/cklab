@@ -1,0 +1,12 @@
+/**
+* lkl 8.5
+**/
+
+.footer { width: 100%; background: url('../../images/footer/footer.jpg'); background-size: cover; }
+.footer .footer-bg { background-color:#383d61; width: 100%; opacity: 0.9; }
+.footer div[class^="col-"] { padding: 55px 15px 0; }
+.footer div[class^="col-"]:first-child > div { padding: 25px 25px 0 0; }
+.footer div[class^="col-"]:nth-child(2) > div { padding: 25px 0 0 0; }
+.footer > div strong { color: #fff; font-size: 18px; }
+.footer > div p { font-size: 15px; line-height: 25px; color: #fff; padding: 0 0 16px; }
+.footer > div div img { -right: 15px; }

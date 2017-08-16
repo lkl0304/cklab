@@ -1,0 +1,83 @@
+/**
+* lkl 8.6
+**/
+
+/* 主页大轮播图样式表 */
+.tu-slider { width: 100%; position: relative; overflow: hidden; }
+.tu-slider .bg-all > div { position: absolute; top: 0; z-index: 99; transition: transform 0.8s, -webkit-transform 0.8s; transform: translateX(-100%); } /*规定轮播图主体样式 过度时间*/
+.tu-slider .bg-all > div.active { position: relative; z-index: 100; transform: translateX(0); } /*规定轮播图是否显示*/
+.tu-slider .bg-all > div.active ~ div { transform: translateX(100%); }
+.tu-slider .bg-all > div > div.bg-img > div { min-height: 400px; width: 100vw; padding: 8vw; background: rgba(0, 0, 0, 0.5); }  /*调整 限制 轮播图大小  设置透明*/
+.tu-slider .bg-all > div:nth-child(1) > div.bg-img { background: url('../../images/index/web-bg.jpg') no-repeat; background-size: 100vw 100%; }
+.tu-slider .bg-all > div:nth-child(2) > div.bg-img { background: url('../../images/index/app-bg.jpg') no-repeat; background-size: 100vw 100%; }
+.tu-slider .bg-all > div:nth-child(3) > div.bg-img { background: url('../../images/index/3d-bg.jpg') no-repeat; background-size: 100vw 100%; }
+.tu-slider .bg-all > div:nth-child(4) > div.bg-img { background: url('../../images/index/how-bg.jpg') no-repeat; background-size: 100vw 100%; }
+.tu-slider .bg-all > div > div.bg-img > div > div { text-align: center; padding-top: 15px; min-height: 230px; } /* 通过文字盒子最小高度 限制轮播图高度 */
+.tu-slider .bg-all > div > div.bg-img > div > div h1 { color: #fff; font-size: 45px; margin-bottom: 30px; }
+.tu-slider .bg-all > div > div.bg-img > div > div p { color: #cacaca; font-size: 18px; margin-bottom: 30px; }
+@media screen and (max-width: 640px){
+	.tu-slider .bg-all > div > div.bg-img > div > div h1 { font-size: 36px; }
+	.tu-slider .bg-all > div > div.bg-img > div > div p { font-size: 16px }
+}
+
+/*选择按钮*/
+ /*background-repeat: no-repeat; background-position: 2.4vw 1.4vw; background-size: 2.6vw 2.6vw; */
+.tu-slider .btn-all li { display: inline-block; list-style: none; width: 25%; padding: 0.8vw 0 0.6vw 0; cursor: pointer; margin-left: -5px; } /*控制选项按钮大小*/
+.tu-slider .btn-all li.active { border-bottom: 0.2vw solid #59bcdb; }
+.tu-slider .btn-all li > div { width: 100%; padding: 0.8vw 0 0.4vw 1.1vw; text-align: center; } /*控制选项按钮大小*/
+.tu-slider .btn-all li:not(:last-child) > div { border-right: 1px solid #DBDBDB; } /*添加分割竖线*/
+/*.tu-slider .btn-all li:nth-child(1) div { background-image: url('../../images/index/web.png');  }
+.tu-slider .btn-all li:nth-child(2) div { background-image: url('../../images/index/app.png'); }
+.tu-slider .btn-all li:nth-child(3) div { background-image: url('../../images/index/3d.png'); }
+.tu-slider .btn-all li:nth-child(4) div { background-image: url('../../images/index/how.png'); }*/
+.tu-slider .btn-all li > div img { position: absolute; top: 0.8vw; left: -4vw; width: 2.5vw; height: 2.5vw; }
+.tu-slider .btn-all li > div strong { display: inline-block; position: relative; padding: 0 0 0.8vw 0; font-size: 1.2vw; } /* 按钮字体大小 */
+.tu-slider .btn-all li > div span { font-size: 1vw; color: #888888; }
+/* 以上都是和大轮播图有关的样式 */
+
+/*核心优势 我们的服务 期待你的加入*/
+/*.core, .server { padding: 5vw 15px 7vw; } 定义每块盒子的上下边距*/
+/*.core h1, .server h1, .join h1 { font-size: 50px; }
+.core > div > p, .server > div > p { font-size: 20px; line-height: 30px; margin-top: 15px; }
+@media screen and (max-width: 640px){
+	.core h1, .server h1 { font-size: 30px; }
+	.core > div > p, .server > div > p { font-size: 15px; }
+} */
+.core > div, .server > div { text-align: center; margin-top: 40px; }
+.core > div:LAST-CHILD > div > div img { width: 95%; margin: 0 auto; margin-bottom: 10px; }
+
+/*提供的资源*/  /* 8.15重新调整高度 */
+.offer { background-color: #f6f6f6;  }
+.offer > div.row { overflow: hidden; }
+.offer > div > div:first-child { padding: 25px 8.5vw 0 9vw;  } /*整体盒子大小 通过内边距撑开整个盒子*/
+@media screen and (max-width: 1024px) and (min-width: 768px){
+	.offer > div > div:first-child { padding: 20px 5.8vw 0 5vw!important;  }
+}
+.offer > div > div:first-child ul li { padding: 10px 0; } /*整体li样式 规定内容区大小*/
+.offer > div > div:first-child ul li > div img { float: left; margin: 2% 5% 8% 0; width: 50px; padding: 5px; border: 2px solid #ed4420; border-radius: 3px; }
+.offer > div > div:first-child ul li > div div { margin-left: calc(5% + 50px); }
+.offer > div > div:first-child ul li > div div p { font-size: 15px; line-height: 22px; } /*左边样式结束*/
+.offer > div > div:last-child  { padding: 35px 9vw 50px 20px; background: url('../../images/index/offer-bg.jpg') no-repeat 0 0; background-size: 100% 100%; }
+@media screen and (max-width: 1024px) and (min-width: 768px){
+	.offer > div > div:last-child { padding: 24px 5vw 26px 20px!important;  }
+}
+@media screen and (max-width: 768px){
+	.offer > div > div:last-child { padding: 20px 5vw 25px 20px!important;  }
+}
+.offer > div > div:last-child > div { margin: 100px 20px; padding: 35px 25px; background: rgba(27,31,32,.7); color: #fff; font-size: 20px; line-height: 36px;  font-weight: 300; border-radius: 3px; }
+
+/*我们的服务 和核心优势部分样式相同*/
+.server > div:LAST-CHILD > div > div { padding: 0 15px; }
+.server > div:LAST-CHILD > div > div img { width: 55px; height: 55px; margin: 30px auto 0; }
+.server > div:LAST-CHILD > div > div h4 { margin: 15% 0 10%; }
+.server > div:LAST-CHILD > div > div p { word-break: break-all; }
+.server > div:LAST-CHILD > div > div > div { min-height: 180px; }
+
+/*期待你的加入*/
+.join { border-top: 1px solid #ddd; padding: 5vw 0 6vw; } /*定义每块盒子的上下边距*/
+.join > div h1 { margin-bottom: 20px; }
+.join > div:last-child { background: url('../../images/index/join-bg.jpg') no-repeat center; background-size: cover; width: 100%; height: 400px; }
+@media screen and (max-width: 768px){
+	.join > div:last-child { height: 260px!important; }
+	.join h1 { font-size: 35px!important; }
+}

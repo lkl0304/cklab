@@ -1,0 +1,57 @@
+/**
+* 8.8 lkl
+**/
+body { transition: margin-left 0.5s; }
+/*header样式 header-left最大宽230px 最小70px*/
+.admin-header { position: fixed; top: 0; left: 0; z-index: 100; height: 70px; width: 100%; background: url(../../images/light.png) center; background-size: cover; }
+.admin-header .header-left { position: absolute; background: url('../../images/logo.png') no-repeat 10px center; background-size: 50px 50px; background-color: #fff; width: 230px; height: 70px; line-height: 70px; padding-left: 90px; font-size: 25px; overflow: hidden; transition: width,padding-left 0.5s,0.5s; }
+.admin-header .header-right { position: absolute; left: 230px; width: calc(100% - 230px); height: 70px; line-height: 70px; padding: 0 30px 0 15px; transition: width,left 0.5s,0.5s; }
+.admin-header .header-right > a { display: inline-block; line-height: 78px; color: #888; font-size: 20px; }
+.admin-header .header-right > a:hover { color: #000; }
+.admin-header .header-right > div > ul { margin: 0; padding: 0; } /*下拉菜单样式*/
+.admin-header .header-right > div > ul > li > a { line-height: 25px; padding: 8px 20px; }
+
+/*侧边栏样式 与header-left宽度变化相同*/
+.admin-side { position: fixed; top: 70px; left: 0; z-index: 100; background-color: rgba(0,0,0,0.85); width: 230px; height: calc(100% - 70px); transition: width 0.5s; }
+.admin-side > ul > li > a { position: absolute; left: 0; width: 100%; padding: 15px 25px; border-radius: 0; line-height: 25px; font-size: 15px; font-weight: 260; text-decoration: none!important; color: #B9B9B9; white-space: nowrap; overflow: hidden; }
+.admin-side > ul > li:nth-child(1) > a { top: 0; }
+.admin-side > ul > li:nth-child(2) > a { top: 52px; }
+.admin-side > ul > li:nth-child(3) > a { top: 104px; }
+.admin-side > ul > li:nth-child(4) > a { top: 156px; }
+.admin-side > ul > li:nth-child(5) > a { top: 208px; }
+.admin-side > ul > li:nth-child(6) > a { top: 260px; }
+.admin-side > ul > li > a span { margin-right: 30px; }
+.admin-side > ul > li > a:hover { background-color: #000; color: #fff; width: 230px; }
+.admin-side > ul > li.active > a { background-color: #000!important; color: #fff; }
+/*内容区样式*/
+.admin-content { position: relative; z-index: 50; min-height: calc(100vh - 126px); overflow: hidden; } /* 保证将内容撑起来 把footer撑到页脚*/
+.admin-content ul.pagination { margin: 0 0 8px; }
+/*页脚样式 与header-right宽度变化相同*/
+.admin-footer { width: 100%; padding: 15px 20px; background: url(../../images/light.png) center; background-size: cover; text-align: right; }
+/*标签页中的样式管理*/
+
+/*仪表盘样式 */
+.admin-box > div > h4 { padding: 12px 5px; }
+h4 > a { color: #000; }
+h4 > a:link { text-decoration: none!important; }
+h4 > a:visited { color: #000; }
+.admin-box > div > div.pull-right { padding: 17px 5px 0; }
+.admin-box > div > div.pull-right input { border: 1px solid #ddd; border-radius: 5px; width: 125px; height: 30px; }
+.admin-box > div div.box-min { padding: 20px 25px; margin: 0 0 30px; text-align: right; border-radius: 5px; }
+.admin-box > div div.box-min p { margin: 0; }
+.admin-box > div div.box-min { background-repeat: no-repeat; background-size: 50px 50px; background-position: 20px 25px; color: #fff; }
+.admin-box > div > div:NTH-CHILD(1) .box-min { background-color: #712AA8; }
+.admin-box > div > div:NTH-CHILD(2) .box-min { background-color: #2A3F9B; }
+.admin-box > div > div:NTH-CHILD(3) .box-min { background-color: #176C53; }
+.admin-box > div > div:NTH-CHILD(4) .box-min { background-color: #821D46; }
+
+/* 文章管理界面中文章类样式 */
+[class^='art-'] { font-weight: bold;  }
+.art-news { color: #2A3F9B; }
+.art-notice { color: #176C53; }
+.art-result { color: #821D46; }
+
+/*简单的a标签 email 中用*/
+.a-btn { color: #fff; width: 80px; }
+.a-btn:link { color: #fff; }
+.a-btn:hover { color: #DADADA; }

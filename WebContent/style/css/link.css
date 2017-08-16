@@ -1,0 +1,10 @@
+/**
+* lkl 8.6
+**/
+
+/*底部的联系方式*/
+.link { background: url('../../images/light.png'); }
+.link > div div[class^='col-'] { padding: 30px 40px; margin: 2vw 0 0;}
+.link > div div[class^='col-'] > div img { width: 65px; height: 65px; margin: 50px auto 10px; }
+.link > div div[class^='col-'] > div div.caption { min-height: 180px; text-align: center; padding: 10px 10px 30px; }
+.link > div div[class^='col-'] > div div.caption a { min-width: 138px; }
