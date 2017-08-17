@@ -4,8 +4,8 @@
 	.about-us .my-box:NOT(:LAST-CHILD) { border-bottom: 1px solid #ddd; }
 	.about-us .my-box > div.row { padding: 50px 0 0; }
 	.about-us .my-box > div.row p { font-size: 15px; line-height: 25px; }
-	.about-us .my-box:NTH-CHILD(1) > div p { padding: 0 2vw; }
-	.about-us .my-box:NTH-CHILD(1) .row  img { width: 100%; border-radius: 5px; }
+	.about-us .my-box:FIRST-CHILD > div p { padding: 0 2vw; }
+	.about-us .my-box:FIRST-CHILD > div.row img { width: 100%; border-radius: 5px; }
 	.about-us .my-box:NTH-CHILD(2) img { border-radius: 5px; }
 </style>
 <div class="about-us">

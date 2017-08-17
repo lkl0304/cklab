@@ -21,7 +21,7 @@ CREATE TABLE `admin` (
 #
 
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1,'cklab','cklab');
+INSERT INTO `admin` VALUES (1,'admin','admin');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 
 #
